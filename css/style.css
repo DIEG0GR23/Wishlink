@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdfdfd;
+}
+
+/* NAV SUPERIOR */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-links a {
+    margin-right: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.logo {
+    width: 80px;
+}
+
+/* BOTONES LOGIN / SIGNUP */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login {
+    background: #dddddd;
+    color: #000;
+}
+
+.signup {
+    background: #ba007c;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* CARRUSEL */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.track {
+    display: flex;
+    animation: scroll 12s linear infinite;
+}
+
+.track img {
+    width: 280px;
+    margin: 0 20px;
+    border-radius: 8px;
+}
+
+/* Pausar animación al pasar mouse */
+.track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Flecha hacia abajo */
+.scroll-down {
+    margin-top: 40px;
+    font-size: 40px;
+    animation: bounce 1.8s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+}
