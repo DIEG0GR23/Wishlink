@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
 }
 
 .nav-links a {
@@ -20,7 +20,7 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 150px;
 }
 
 /* BOTONES LOGIN / SIGNUP */
@@ -96,4 +96,81 @@ body {
 
 @keyframes bounce {
     0% { transform: translateY(0); }
+}
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 25px; /*separa como funciona del centro*/
+}
+/* SECCIÓN 2 CON FONDO */
+.second-section {
+    width: 100%;
+    height: 90vh;
+    background-image: url("img/fondo2.jpg"); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAJA SIGNUP */
+.signup-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px 50px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.signup-box h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.signup-box p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.signup-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ba007c;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.scroll-down {
+    transition: opacity 0.5s ease;
+}
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 30px; /* AJUSTA ESTA ALTURA */
+    transform: translateX(-50%);
+    font-size: 40px;
+    animation: normal 1.8s infinite;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+.signup-box {
+    margin-top: 1420px; 
+}
+html {
+    scroll-behavior: smooth;
+}
+.chevron {
+    font-size: 28px;
+    color: #ba007c;
+    text-decoration: none;
+    opacity: 0.8;
+    animation: bounce 1.8s infinite;
+}
+.chevron:hover {
+    opacity: 1;
 }

@@ -9,18 +9,20 @@
 <body>
 
     <!-- NAV SUPERIOR -->
-    <header class="top-nav">
-        <img src="logo.png" alt="logo" class="logo">
+   <header class="top-nav">
+    <img src="img/WishlinklogoS.png" alt="logo" class="logo">
 
+    <div class="right-section">
         <nav class="nav-links">
             <a href="#como-funciona">¿Cómo funciona?</a>
         </nav>
 
         <div class="auth-buttons">
-            <a class="btn login" href="login.html">Login</a>
-            <a class="btn signup" href="registro.html">Signup</a>
+            <a href="login.html" class="btn login">Iniciar sesión</a>
+            <a href="registro.html" class="btn signup">Crear cuenta</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- HERO + ESLOGAN -->
     <section class="hero">
@@ -29,19 +31,43 @@
         <!-- CARRUSEL -->
         <div class="carousel">
             <div class="track">
-                <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
+                <img src="/Users/diegoguerrero/Documents/Proyecto WishLink/7115UH1ca6L._AC_SY695_.jpg" alt="">
                 <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
                 <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
                 <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
             </div>
         </div>
+        <section class="second-section">
+    <div class="signup-box">
+        <h2>Únete a Wishlink</h2>
+        <p>Crea tu lista de deseos y compártela con quien quieras.</p>
 
-        <!-- Flecha para bajar -->
-        <div class="scroll-down">
-            <span>▼</span>
-        </div>
-    </section>
+        <a href="registro.html" class="signup-btn">Crear cuenta</a>
+    </div>
+</section>
 
+       
+      <div id="scrollDown" class="scroll-down">
+  <a href="#segunda-parte" class="chevron">▼</a>
+</div>
+
+<script>
+    const scrollDown = document.getElementById("scrollDown");
+
+    window.addEventListener("scroll", () => {
+        const secondSection = document.getElementById("segunda-parte");
+        const secondSectionTop = secondSection.getBoundingClientRect().top;
+
+        if (secondSectionTop < window.innerHeight * 0.9) {
+            scrollDown.style.opacity = "0";
+            scrollDown.style.pointerEvents = "none";
+        } else {
+            scrollDown.style.opacity = "1";
+            scrollDown.style.pointerEvents = "auto";
+        }
+    });
+</script>
+<section class="second-section" id="segunda-parte"></section>
     <script src="js/app.js"></script>
 </body>
 </html>
