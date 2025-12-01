@@ -9,65 +9,78 @@
 <body>
 
     <!-- NAV SUPERIOR -->
-   <header class="top-nav">
-    <img src="img/WishlinklogoS.png" alt="logo" class="logo">
+    <header class="top-nav">
+        <img src="img/WishlinklogoS.png" alt="logo" class="logo">
 
-    <div class="right-section">
-        <nav class="nav-links">
-            <a href="#como-funciona">¿Cómo funciona?</a>
-        </nav>
+        <div class="right-section">
+            <nav class="nav-links">
+                <a href="#segunda-parte">¿Cómo funciona?</a>
+            </nav>
 
-        <div class="auth-buttons">
-            <a href="login.html" class="btn login">Iniciar sesión</a>
-            <a href="registro.html" class="btn signup">Crear cuenta</a>
-        </div>
-    </div>
-</header>
-
-    <!-- HERO + ESLOGAN -->
-    <section class="hero">
-        <h1>Tus listas, tus sueños, tus regalos.</h1>
-
-        <!-- CARRUSEL -->
-        <div class="carousel">
-            <div class="track">
-                <img src="/Users/diegoguerrero/Documents/Proyecto WishLink/7115UH1ca6L._AC_SY695_.jpg" alt="">
-                <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
-                <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
-                <img src="../Screenshot 2025-11-20 at 15.37.50.png" alt="">
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login">Iniciar sesión</a>
+                <a href="#segunda-parte" class="btn signup">Crear cuenta</a>
             </div>
         </div>
-        <section class="second-section">
-    <div class="signup-box">
-        <h2>Únete a Wishlink</h2>
-        <p>Crea tu lista de deseos y compártela con quien quieras.</p>
+    </header>
 
-        <a href="registro.html" class="signup-btn">Crear cuenta</a>
-    </div>
-</section>
+    <!-- HERO PRINCIPAL -->
+    <section class="hero-section">
+        <h1>Wishlink</h1>
+        <p class="slogan">Tus listas • Tus sueños • Tus regalos</p>
 
-       
-      <div id="scrollDown" class="scroll-down">
-  <a href="#segunda-parte" class="chevron">▼</a>
-</div>
+        <div class="carousel">
+            <div class="track">
+                <img src="img/ejemplo1.jpg" alt="">
+                <img src="img/ejemplo2.jpg" alt="">
+                <img src="img/ejemplo3.jpg" alt="">
+                <img src="img/ejemplo4.jpg" alt="">
+            </div>
+        </div>
+    </section>
 
-<script>
-    const scrollDown = document.getElementById("scrollDown");
+    <!-- SECCIÓN SIGNUP -->
+    <section class="second-section" id="segunda-parte">
 
-    window.addEventListener("scroll", () => {
-        const secondSection = document.getElementById("segunda-parte");
-        const secondSectionTop = secondSection.getBoundingClientRect().top;
+        <div class="signup-container">
 
-        if (secondSectionTop < window.innerHeight * 0.9) {
-            scrollDown.style.opacity = "0";
-            scrollDown.style.pointerEvents = "none";
-        } else {
-            scrollDown.style.opacity = "1";
-            scrollDown.style.pointerEvents = "auto";
-        }
-    });
-</script>
-<section class="second-section" id="segunda-parte"></section>
+            <h2>Crea tu cuenta</h2>
+
+            <form id="signup-form">
+
+                <div class="input-group">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" id="correo" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <button type="submit" class="btn-main">Crear cuenta</button>
+
+  <button type="button" class="google-btn">
+    <img src="img/googlelogo.png" alt="" class="google-icon">
+    Continuar con Google
+</button>
+
+                <p class="login-text">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+
+            </form>
+        </div>
+    </section>
+
     <script src="js/app.js"></script>
 </body>
 </html>

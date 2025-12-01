@@ -1,10 +1,15 @@
+/* ============ RESET ============ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fdfdfd;
+    background: #ffffff; /* fondo blanco de la primera parte */
 }
 
-/* NAV SUPERIOR */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============ NAV SUPERIOR ============ */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -23,42 +28,34 @@ body {
     width: 150px;
 }
 
-/* BOTONES LOGIN / SIGNUP */
-.auth-buttons {
+.right-section {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 25px;
 }
 
-.btn {
-    padding: 10px 25px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.login {
-    background: #dddddd;
-    color: #000;
-}
-
-.signup {
-    background: #ba007c;
-    color: white;
-}
-
-/* HERO */
-.hero {
+/* ============ HERO PRINCIPAL ============ */
+.hero-section {
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
 }
 
-.hero h1 {
-    font-size: 38px;
+.hero-section h1 {
+    font-size: 46px;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #ba007c;
+}
+
+.slogan {
+    font-size: 1.4rem;
+    color: #444;
+    letter-spacing: 1px;
+    font-weight: 300;
     margin-bottom: 30px;
 }
 
-/* CARRUSEL */
+/* ============ CARRUSEL ============ */
 .carousel {
     width: 100%;
     overflow: hidden;
@@ -76,7 +73,6 @@ body {
     border-radius: 8px;
 }
 
-/* Pausar animación al pasar mouse */
 .track:hover {
     animation-play-state: paused;
 }
@@ -86,91 +82,105 @@ body {
     to { transform: translateX(-50%); }
 }
 
-/* Flecha hacia abajo */
-.scroll-down {
-    margin-top: 40px;
-    font-size: 40px;
-    animation: bounce 1.8s infinite;
-    cursor: pointer;
-}
-
-@keyframes bounce {
-    0% { transform: translateY(0); }
-}
-.right-section {
-    display: flex;
-    align-items: center;
-    gap: 25px; /*separa como funciona del centro*/
-}
-/* SECCIÓN 2 CON FONDO */
+/* ============ SECCIÓN SIGNUP ============ */
 .second-section {
     width: 100%;
-    height: 90vh;
-    background-image: url("img/fondo2.jpg"); /* Cambia por tu imagen */
+    min-height: 100vh;
+    background-image: url("img/doodle.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 150px;
+    padding-bottom: 80px;
 }
 
-/* CAJA SIGNUP */
-.signup-box {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 40px 50px;
-    border-radius: 20px;
+/* Caja del formulario */
+.signup-container {
+    width: 360px;
+    padding: 25px;
+    background: #ffffffd3;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
     text-align: center;
-    width: 350px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.signup-box h2 {
-    margin-bottom: 10px;
-    font-size: 28px;
+.signup-logo {
+    width: 70px;
+    margin-bottom: 15px;
 }
 
-.signup-box p {
-    font-size: 15px;
-    margin-bottom: 30px;
-    color: #444;
+.signup-container form {
+    display: flex;
+    flex-direction: column;
 }
 
-.signup-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #ba007c;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
+.signup-container h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* Inputs */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Botón crear cuenta */
+.btn-main {
+    width: 100%;
+    padding: 12px;
+    background: #ba007c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
     font-size: 16px;
 }
-.scroll-down {
-    transition: opacity 0.5s ease;
+
+.btn-main:hover {
+    background: #8a005e;
 }
-.scroll-down {
-    position: absolute;
-    left: 50%;
-    bottom: 30px; /* AJUSTA ESTA ALTURA */
-    transform: translateX(-50%);
-    font-size: 40px;
-    animation: normal 1.8s infinite;
+
+.google-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-weight: bold;
     cursor: pointer;
-    transition: opacity 0.5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espacio entre icono y texto */
 }
-.signup-box {
-    margin-top: 1420px; 
+
+.google-btn .google-icon {
+    width: 20px;
+    height: 20px;
 }
-html {
-    scroll-behavior: smooth;
-}
-.chevron {
-    font-size: 28px;
-    color: #ba007c;
-    text-decoration: none;
-    opacity: 0.8;
-    animation: bounce 1.8s infinite;
-}
-.chevron:hover {
-    opacity: 1;
+
+/* Texto login */
+.login-text {
+    margin-top: 15px;
+    font-size: 14px;
 }
