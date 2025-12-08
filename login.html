@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlink - Tu lista de regalos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="top-nav">
+    <img src="img/WishlinklogoS.png" alt="logo" class="logo">
+
+    <div class="right-section">
+        <nav class="nav-links">
+            <a href="como-funciona.html">¿Cómo funciona?</a>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="#" id="openLogin" class="btn login">Iniciar sesión</a>
+            <a href="#signup" class="btn signup">Crear cuenta</a>
+        </div>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+    <h1>Wishlink</h1>
+    <p class="slogan">Tus listas • Tus sueños • Tus regalos</p>
+
+    <div class="carousel">
+        <div class="track">
+            <img src="img/ejemplo1.jpg" alt="">
+            <img src="img/ejemplo2.jpg" alt="">
+            <img src="img/ejemplo3.jpg" alt="">
+            <img src="img/ejemplo4.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- ================= SIGNUP (SCROLL) ================= -->
+<section class="second-section" id="signup">
+    <div class="signup-container">
+
+        <h2>Crea tu cuenta</h2>
+
+        <form id="signup-form">
+            <div class="input-group">
+                <label>Nombre</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Apellido</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Correo electrónico</label>
+                <input type="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" required>
+            </div>
+
+            <button type="submit" class="btn-main">Crear cuenta</button>
+
+            <div class="social-buttons">
+                <button type="button" class="google-btn">
+                    <img src="img/googlelogo.png" class="google-icon">
+                    Continuar con Google
+                </button>
+            </div>
+
+            <p class="login-text">
+                ¿Ya tienes cuenta?
+                <a href="#" id="openLoginFromSignup">Inicia sesión</a>
+            </p>
+        </form>
+
+    </div>
+</section>
+
+<!-- ================= LOGIN MODAL ================= -->
+<div class="modal" id="loginModal">
+    <div class="modal-content signup-container">
+
+        <span class="close-modal" id="closeLogin">&times;</span>
+
+        <h2>Iniciar sesión</h2>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label>Correo electrónico</label>
+                <input type="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" required>
+            </div>
+
+            <button type="submit" class="btn-main">
+                Iniciar sesión
+            </button>
+
+            <div class="social-buttons">
+                <button type="button" class="google-btn">
+                    <img src="img/google-logo.png" class="google-icon">
+                    Iniciar sesión con Google
+                </button>
+            </div>
+
+            <p class="login-text">
+                ¿No tienes cuenta?
+                <a href="#signup" id="closeAndSignup">Crea una</a>
+            </p>
+        </form>
+
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

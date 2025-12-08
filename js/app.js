@@ -16,3 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+const openLogin = document.getElementById('openLogin');
+const loginModal = document.getElementById('loginModal');
+const closeLogin = document.getElementById('closeLogin');
+
+openLogin.onclick = () => {
+    loginModal.style.display = 'flex';
+};
+
+closeLogin.onclick = () => {
+    loginModal.style.display = 'none';
+};
+
+loginModal.onclick = (e) => {
+    if (e.target === loginModal) {
+        loginModal.style.display = 'none';
+    }
+};

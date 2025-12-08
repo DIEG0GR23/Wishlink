@@ -183,4 +183,28 @@ html {
 .login-text {
     margin-top: 15px;
     font-size: 14px;
+}.google-icon {
+    width: 18px;
+    height: auto;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 24px;
+    cursor: pointer;
 }
