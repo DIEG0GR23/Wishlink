@@ -111,6 +111,20 @@ html {
     transform: scale(1.05);
 }
 
+/* ============ FOOTER ============ */
+.footer-bar {
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    /* Marcador de posición para tu imagen. Cambia 'img/doodle.png' por tu archivo */
+    background-image: url('../img/doodle.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+
 /* ============ CARRUSEL DOBLE (MARQUEE) ============ */
 .product-showcase {
     /* Fondo neutro o suave para separar del hero y signup */

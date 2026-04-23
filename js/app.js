@@ -16,20 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-const openLogin = document.getElementById('openLogin');
-const loginModal = document.getElementById('loginModal');
-const closeLogin = document.getElementById('closeLogin');
+// Lógica del Modal de Login
+const openLoginButtons = document.querySelectorAll('.open-login-modal');
+const loginModal = document.getElementById('login-modal');
+const closeLogin = document.querySelector('.close-modal');
 
-openLogin.onclick = () => {
-    loginModal.style.display = 'flex';
-};
+openLoginButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault(); // Evitar el salto del enlace #
+        loginModal.style.display = 'flex';
+    });
+});
 
-closeLogin.onclick = () => {
-    loginModal.style.display = 'none';
-};
+if (closeLogin) {
+    closeLogin.addEventListener('click', () => {
+        loginModal.style.display = 'none';
+    });
+}
 
-loginModal.onclick = (e) => {
+window.addEventListener('click', (e) => {
     if (e.target === loginModal) {
         loginModal.style.display = 'none';
     }
-};
+});
