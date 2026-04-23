@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
         /* ============ RESET Y BASE ============ */
         body {
             margin: 0;
-            background-color: #1a1a1a; /* Fondo gris oscuro */
+            background-color: #1a1a1a;
+            /* Fondo gris oscuro */
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -20,10 +22,14 @@
         .main-container {
             width: 100%;
             max-width: 1200px;
-            background-color: #ffffff; /* Contenedor blanco central */
-            border-radius: 20px; /* Esquinas redondas */
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Sombra suave */
-            position: relative; /* Para el avatar flotante */
+            background-color: #ffffff;
+            /* Contenedor blanco central */
+            border-radius: 20px;
+            /* Esquinas redondas */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            /* Sombra suave */
+            position: relative;
+            /* Para el avatar flotante */
             display: flex;
             flex-direction: column;
         }
@@ -31,8 +37,10 @@
         /* ============ AVATAR FLOTANTE ============ */
         .avatar-container {
             position: absolute;
-            top: 50px; /* Flotando entre header y el contenido */
-            right: -25px; /* Parcialmente fuera */
+            top: 50px;
+            /* Flotando entre header y el contenido */
+            right: -25px;
+            /* Parcialmente fuera */
             z-index: 10;
             border-radius: 50%;
             background-color: #fff;
@@ -126,24 +134,30 @@
             font-size: 18px;
             color: #111;
             font-family: Arial, sans-serif;
-            min-height: 22px; /* Espacio uniforme si no hay título */
+            min-height: 22px;
+            /* Espacio uniforme si no hay título */
         }
 
         /* ============ TARJETA LISTA (CARD) ============ */
         .list-card {
             width: 100%;
-            aspect-ratio: 1 / 1; /* Cuadrada */
+            aspect-ratio: 1 / 1;
+            /* Cuadrada */
             border-radius: 25px;
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             background-color: #f0f0f0;
         }
 
         .card-bg {
             position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px; /* Margen para evitar bordes blancos */
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            /* Margen para evitar bordes blancos */
             background-size: cover;
             background-position: center;
             transition: filter 0.3s ease, transform 0.3s ease;
@@ -152,7 +166,8 @@
 
         .list-card:hover .card-bg {
             filter: brightness(0.6);
-            transform: scale(1.03); /* Efecto extra dinámico */
+            transform: scale(1.03);
+            /* Efecto extra dinámico */
         }
 
         /* Superpuesto Hover */
@@ -178,7 +193,7 @@
             margin: 8px 0;
             font-size: 16px;
             font-weight: 500;
-            text-shadow: 1px 2px 5px rgba(0,0,0,0.8);
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
         }
 
         /* Barra de progreso en tarjeta 4 */
@@ -188,17 +203,20 @@
             left: 20px;
             right: 20px;
             height: 30px;
-            background-color: rgba(220, 220, 220, 0.85); /* Gris claro */
+            background-color: rgba(220, 220, 220, 0.85);
+            /* Gris claro */
             border-radius: 15px;
             z-index: 3;
             overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
 
         .progress-bar {
             height: 100%;
-            width: 65%; /* 65% dinámico */
-            background-color: #61f23a; /* Verde brillante */
+            width: 65%;
+            /* 65% dinámico */
+            background-color: #61f23a;
+            /* Verde brillante */
             border-radius: 15px;
         }
 
@@ -241,9 +259,10 @@
             gap: 20px;
             font-size: 24px;
         }
-        
+
         .social-icons i {
-            color: white; /* Instrucción: Iconos en blanco */
+            color: white;
+            /* Instrucción: Iconos en blanco */
             cursor: pointer;
             transition: transform 0.2s, color 0.2s;
         }
@@ -262,8 +281,15 @@
         }
 
         /* Iconos de pago con color como en la imagen */
-        .footer-right .fa-cc-mastercard { color: #ff5f00; }
-        .footer-right .fa-cc-visa { color: #1a1f71; background: white; border-radius: 4px; }
+        .footer-right .fa-cc-mastercard {
+            color: #ff5f00;
+        }
+
+        .footer-right .fa-cc-visa {
+            color: #1a1f71;
+            background: white;
+            border-radius: 4px;
+        }
 
 
         /* ============ RESPONSIVE (MÓVIL / TABLET) ============ */
@@ -271,6 +297,7 @@
             .card-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .avatar-container {
                 right: 20px;
                 top: 80px;
@@ -281,21 +308,28 @@
             .card-grid {
                 grid-template-columns: 1fr;
             }
+
             .nav-links {
-                display: none; 
+                display: none;
             }
+
             .content-area {
                 padding: 30px 20px;
             }
+
             .welcome-text {
                 font-size: 28px;
             }
+
             .footer {
                 flex-direction: column;
                 gap: 25px;
                 text-align: center;
             }
-            .footer-left, .footer-right, .footer-center {
+
+            .footer-left,
+            .footer-right,
+            .footer-center {
                 flex: none;
                 justify-content: center;
                 width: 100%;
@@ -303,6 +337,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="main-container">
@@ -326,17 +361,19 @@
 
         <!-- ============ CONTENIDO ============ -->
         <div class="content-area">
-            
+
             <h1 class="welcome-text">Bienvenido Diego!</h1>
 
             <!-- PRIMERA GRILLA -->
             <div class="card-grid">
-                
+
                 <!-- Tarjeta 1 -->
                 <div class="card-wrapper">
                     <div class="card-title">Listas compartidas contigo</div>
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://placehold.co/600x600/f28f3b/000000?text=NO+SEAS%0ALO+QUE+TE%0AHICIERON%0ASE%0AMEJOR.');"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://placehold.co/600x600/f28f3b/000000?text=NO+SEAS%0ALO+QUE+TE%0AHICIERON%0ASE%0AMEJOR.');">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Lista Compartida</p>
                             <p>Usuario: Maria G.</p>
@@ -349,7 +386,9 @@
                 <div class="card-wrapper">
                     <div class="card-title">Listas recientes</div>
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1541888049688-662584cfcc26?w=600&h=600&fit=crop');"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1541888049688-662584cfcc26?w=600&h=600&fit=crop');">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Lista Compartida</p>
                             <p>Usuario: Carlos T.</p>
@@ -362,7 +401,9 @@
                 <div class="card-wrapper">
                     <div class="card-title"></div> <!-- Vacío intencionalmente para mantener alineación -->
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&h=600&fit=crop');"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&h=600&fit=crop');">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Lista Compartida</p>
                             <p>Usuario: Ana P.</p>
@@ -375,8 +416,10 @@
                 <div class="card-wrapper">
                     <div class="card-title">Tu lista va en 65%! 🤩</div>
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop');"></div>
-                        
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop');">
+                        </div>
+
                         <!-- Barra de progreso solo en esta tarjeta -->
                         <div class="progress-container">
                             <div class="progress-bar"></div>
@@ -395,13 +438,15 @@
 
             <!-- SEGUNDA GRILLA -->
             <h2 class="section-main-title">Listas Publicas</h2>
-            
+
             <div class="card-grid">
-                
+
                 <!-- Tarjeta 5 -->
                 <div class="card-wrapper">
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&h=600&fit=crop'); filter: grayscale(100%) contrast(150%);"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&h=600&fit=crop'); filter: grayscale(100%) contrast(150%);">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Pública</p>
                             <p>Usuario: Otaku Fan</p>
@@ -413,7 +458,9 @@
                 <!-- Tarjeta 6 -->
                 <div class="card-wrapper">
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=600&h=600&fit=crop');"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=600&h=600&fit=crop');">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Pública</p>
                             <p>Usuario: Dog Lover</p>
@@ -425,7 +472,9 @@
                 <!-- Tarjeta 7 -->
                 <div class="card-wrapper">
                     <div class="list-card">
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop');"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop');">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Pública</p>
                             <p>Usuario: Office Boss</p>
@@ -438,7 +487,9 @@
                 <div class="card-wrapper">
                     <div class="list-card">
                         <!-- Usar estilo específico para un personaje en azul estilo anime -->
-                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1613336026275-d6d473084e85?w=600&h=600&fit=crop'); filter: hue-rotate(90deg);"></div>
+                        <div class="card-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1613336026275-d6d473084e85?w=600&h=600&fit=crop'); filter: hue-rotate(90deg);">
+                        </div>
                         <div class="hover-overlay">
                             <p>Status: Pública</p>
                             <p>Usuario: Art Girl</p>
@@ -457,7 +508,7 @@
             <div class="footer-left">
                 Copyright © Wishlink.com
             </div>
-            
+
             <div class="footer-center">
                 <span class="contact-text">Contactanos</span>
                 <div class="social-icons">
@@ -477,4 +528,5 @@
     </div> <!-- fin main-container -->
 
 </body>
+
 </html>
